@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "next-themes";
+import { Toaster } from "sonner";
+import Header from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,10 +33,18 @@ export default function RootLayout({
   defaultTheme="system"
   enableSystem
   disableTransitionOnChange
->  <Toaster />
+>  
+<div className="relative-flex h-24 w-full items-center justify-between bg-popover px-3 sm:px-8
+style={{
+    boxShadow: shadow
+}}
+">   
+<Header/>
+</div>
   {children}
-
+  <Toaster />
 </ThemeProvider>
+
       </body>
     </html>
   );

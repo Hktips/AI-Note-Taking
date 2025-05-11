@@ -2,7 +2,7 @@ import { shadow } from "@/styles/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import DarkModeToggle from "./ui/DarkModeToggle";
+import DarkModeToggle from "./DarkModeToggle";
 
 function Header() {
     const user =null;
